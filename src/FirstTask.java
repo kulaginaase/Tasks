@@ -12,10 +12,13 @@ public class FirstTask {
         long priceRub = (long) (priceDollar * course);
         short allMoney = 160;
         byte remainSMoney = (byte) (allMoney - priceRub);
+        FirstTask self = new FirstTask();
 
         String firstTaskResult = foodCount + " " + food + " стоимостью " + priceDollar + " долларов, или "
                 + priceRub + " рублей." + "\n" + "В кошельке осталось " + remainSMoney +
-                " " + toEatOrNotToEat + " рублей... " + someThing + " -ake!";
+                " " + toEatOrNotToEat + " рублей... " + someThing + " -ake!" + self;
+
+        System.out.println("----------------------------------------");
 
         return firstTaskResult;
     }

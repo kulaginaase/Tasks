@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Locale;
 public class SecondTask {
 
@@ -9,7 +10,8 @@ public class SecondTask {
     public String stringMethods() {
 
         String myName = "Kulagina Alisa Sergeevna";
-        String anotherName = " ";
+        String anotherName = "Elena";
+        String myNewName = "";
 
         int nameLength = myName.length();
         boolean nameNotExists = myName.isEmpty();
@@ -21,10 +23,24 @@ public class SecondTask {
         String replace = myName.replace("sa", "na");
         char charAt = myName.charAt(7);
 
-        String secondTaskResult = nameLength + " " + nameNotExists + " " +
-                isTheSameName + " " + isTheSameNameIgnoreCase + " " +
-                isNameContaines + " " + isStartsWith + " " + concatName + " " +
-                replace + " " + charAt;
+        char[] newName = myName.toCharArray();
+        anotherName.getChars(0, 5, newName, 9);
+        for (int i = 0; i < newName.length; i++) {
+            myNewName += newName[i];
+        }
+
+        String secondTaskResult = "Длина имени - " + nameLength + " символов" + "\n" +
+                "Имя не существует? " + nameNotExists + "\n" +
+                "Это имя - " + anotherName + "? " + isTheSameName + "\n" +
+                "Это имя - " + anotherName.toUpperCase() + "? " + isTheSameNameIgnoreCase + "\n" +
+                "Это имя - ALISA? " + isNameContaines + "\n" +
+                "Это имя начинается с 'Ж'? " + isStartsWith + "\n" +
+                "Добавить в конце '!' " + concatName + "\n" +
+                "Заменить 'са' на 'на' " + replace + "\n" +
+                "Выбрать 8-ой символ в имени - " + charAt + "\n" +
+                "Заменить имя на Елена " + myNewName;
+
+        System.out.println("----------------------------------------");
         return secondTaskResult;
     }
 }
