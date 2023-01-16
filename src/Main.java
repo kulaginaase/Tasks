@@ -10,18 +10,18 @@ public class Main {
         SwitchCase switchCase = new SwitchCase();
 
 /**0*/
-//        System.out.println("Hello world!");
-///**1*/
-//        System.out.println(firstTaskCycle.allTypes());
-///**2*/
-//        System.out.println(secondTaskCycle.stringMethods());
-///**3*/
-//       thirdTaskCycle.getAllResults(500, 1000, 12);
-///**4*/
-//
-//
-///**5*/
-//       fifthTaskCycle.printCycle();
+        System.out.println("Hello world!");
+/**1*/
+        System.out.println(firstTaskCycle.allTypes());
+/**2*/
+        System.out.println(secondTaskCycle.stringMethods());
+/**3*/
+       thirdTaskCycle.getAllResults(500, 1000, 12);
+/**4 - требуются уточнения по задаче */
+
+
+/**5*/
+       fifthTaskCycle.printCycle();
 /**IfAndElse*/
         ifAndElse.runAllCases();
 

@@ -23,7 +23,7 @@ public class SwitchCase {
         enterThirdNumber();
     }
 
-    public void enterFirstNumber() {
+    private void enterFirstNumber() {
         System.out.print("Введите число 7, 3 или 2");
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
@@ -43,7 +43,7 @@ public class SwitchCase {
         }
     }
 
-    public void enterSecondNumber() {
+    private void enterSecondNumber() {
         System.out.print("Введите число 202");
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
@@ -57,7 +57,7 @@ public class SwitchCase {
         }
     }
 
-    public void enterThirdNumber() {
+    private void enterThirdNumber() {
         System.out.print("Введите число 303");
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();

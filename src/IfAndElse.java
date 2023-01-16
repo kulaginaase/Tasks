@@ -22,7 +22,7 @@ public class IfAndElse {
         enterSecondNumberIfAndElse();
         enterThirdNumberIfAndElse();
     }
-    public void enterFirstNumberIfAndElse() {
+    private void enterFirstNumberIfAndElse() {
 
         System.out.print("Введите число 5, 4 или 1");
         Scanner scanner = new Scanner(System.in);
@@ -38,7 +38,7 @@ public class IfAndElse {
         }
     }
 
-    public void enterSecondNumberIfAndElse() {
+    private void enterSecondNumberIfAndElse() {
         System.out.print("Введите число 101");
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
@@ -49,7 +49,7 @@ public class IfAndElse {
         }
     }
 
-    public void enterThirdNumberIfAndElse() {
+    private void enterThirdNumberIfAndElse() {
         System.out.print("Введите число 202");
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
