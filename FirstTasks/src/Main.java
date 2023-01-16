@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String... args) {
 
         FirstTaskCycle firstTaskCycle = new FirstTaskCycle();
         SecondTaskCycle secondTaskCycle = new SecondTaskCycle();
