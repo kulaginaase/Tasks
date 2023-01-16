@@ -1,9 +1,7 @@
-public class ThirdTask {
+public class ThirdTaskCycle {
     /**
-     * Написвать метод, который будет повышать вам зарплату каждый месяц на 1000$
-     * while
-     * do while
-     * for
+     * Написать программу, которая увеличивает вам зарплату каждый месяц на $1000,
+     * используя циклы while/ do ... while, for. (Все три реализации)
      */
     public void getAllResults(int salary, int raiseValue, int monthCount) {
         System.out.println("----------------------------------------");

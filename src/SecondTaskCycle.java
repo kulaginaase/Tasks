@@ -1,6 +1,5 @@
-import java.util.ArrayList;
 import java.util.Locale;
-public class SecondTask {
+public class SecondTaskCycle {
 
     /**
      * Объявить строку с вашим полным именем и вывести на экран результат

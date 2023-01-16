@@ -1,4 +1,4 @@
-public class FirstTask {
+public class FirstTaskCycle {
     /** Объявить переменные всех вам известных типов
      * и вывести их значения на экран.*/
     public String allTypes() {
@@ -12,7 +12,7 @@ public class FirstTask {
         long priceRub = (long) (priceDollar * course);
         short allMoney = 160;
         byte remainSMoney = (byte) (allMoney - priceRub);
-        FirstTask self = new FirstTask();
+        FirstTaskCycle self = new FirstTaskCycle();
 
         String firstTaskResult = foodCount + " " + food + " стоимостью " + priceDollar + " долларов, или "
                 + priceRub + " рублей." + "\n" + "В кошельке осталось " + remainSMoney +
