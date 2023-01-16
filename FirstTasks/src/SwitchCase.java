@@ -6,7 +6,6 @@ public class SwitchCase {
      * System.out.print ("Введите ……….. ");
      * Scanner scanner = new Scanner(System.in);
      * int i = scanner.nextInt();
-     * <p>
      * 1. Необходимо написать программу, где бы пользователю предлагалось ввести число на выбор: 7, 3 или 2,
      * а программа должна сказать, какое число ввёл пользователь: 7, 3, или 2.
      * 2. Необходимо написать программу, где бы пользователю предлагалось ввести число  202.
@@ -18,9 +17,13 @@ public class SwitchCase {
      */
 
     public void runAllCases() {
+        System.out.println("----------------------------------------");
         enterFirstNumber();
+        System.out.println("----------------------------------------");
         enterSecondNumber();
+        System.out.println("----------------------------------------");
         enterThirdNumber();
+        System.out.println("------------------The End---------------");
     }
 
     private void enterFirstNumber() {

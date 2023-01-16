@@ -17,8 +17,8 @@ public class Main {
         System.out.println(secondTaskCycle.stringMethods());
 /**3*/
        thirdTaskCycle.getAllResults(500, 1000, 12);
-/**4 - требуются уточнения по задаче */
-
+/**4*/
+fourthTaskCycle.getAllResults(10000, 1000, 10);
 
 /**5*/
        fifthTaskCycle.printCycle();

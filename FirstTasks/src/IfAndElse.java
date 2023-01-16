@@ -18,8 +18,11 @@ public class IfAndElse {
      */
 
     public void runAllCases() {
+        System.out.println("----------------------------------------");
         enterFirstNumberIfAndElse();
+        System.out.println("----------------------------------------");
         enterSecondNumberIfAndElse();
+        System.out.println("----------------------------------------");
         enterThirdNumberIfAndElse();
     }
     private void enterFirstNumberIfAndElse() {

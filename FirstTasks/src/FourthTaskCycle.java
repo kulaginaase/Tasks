@@ -3,6 +3,7 @@ public class FourthTaskCycle {
      * Написать программу,
      * которая вам уменьшает зп с $10000 до $0 каждый месяц
      * используя циклы while/ do ... while, for. (Все три реализации).
+     * Комментарий от Андрея Павловича: "10000 - 1000, и так 10 циклов"
      */
 
     public void getAllResults(int salary, int minimizeValue, int monthCount) {

@@ -11,6 +11,7 @@ public class FifthTaskCycle {
         }
         String print = cycle.toString().replace("[", "").replace("]", "");
 
+        System.out.println("----------------------------------------");
         System.out.println(print);
     }
 }
