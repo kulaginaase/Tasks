@@ -16,17 +16,14 @@ public class Main {
 /**2*/
         System.out.println(secondTaskCycle.stringMethods());
 /**3*/
-       thirdTaskCycle.getAllResults(500, 1000, 12);
+        thirdTaskCycle.getAllResults(500, 1000, 12);
 /**4*/
-fourthTaskCycle.getAllResults(10000, 1000, 10);
-
+        fourthTaskCycle.getAllResults(10000, 1000, 10);
 /**5*/
-       fifthTaskCycle.printCycle();
+        fifthTaskCycle.printCycle();
 /**IfAndElse*/
         ifAndElse.runAllCases();
-
 /**SwitchCase*/
         switchCase.runAllCases();
-
     }
 }
