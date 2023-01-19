@@ -1,7 +1,7 @@
-public class Box {
+public class MyBox {
     /**
      * Создать ArrayList
-     * 1.	Создать ArrayList, содержащий объекты Box. (Объект Box имеет поля вес, высота, широта, глубина)
+     * 1.	Создать ArrayList, содержащий объекты MyBox. (Объект MyBox имеет поля вес, высота, широта, глубина)
      * 2.	Написать метод, который перебирает элементы коллекции и проверяет вес коробок.
      * 3.	Если вес коробки больше 300 гр, коробка перемещается в другую коллекцию.
      */
@@ -11,7 +11,7 @@ public class Box {
     double depth;
     double width;
 
-    public Box(double weight, double height, double depth, double width) {
+    public MyBox(double weight, double height, double depth, double width) {
         this.weight = weight;
         this.height = height;
         this.depth = depth;
