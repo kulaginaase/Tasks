@@ -1,4 +1,4 @@
-public class RegularHexagon {
+public class RegularHexagon implements Figure {
     int side;
     String name;
 
@@ -21,5 +21,20 @@ public class RegularHexagon {
     public RegularHexagon(int side, String name) {
         this.side = side;
         this.name = name;
+    }
+
+    @Override
+    public int perimeter() {
+        return side * 6;
+    }
+
+    @Override
+    public int square() {
+        return (int) ((3 * Math.sqrt(3) * Math.pow(side, 2)) / 2);
+    }
+
+    @Override
+    public String name() {
+        return name;
     }
 }

@@ -1,4 +1,4 @@
-public class Rect {
+public class Rect implements Figure {
     int sideA;
     int sideB;
     String name;
@@ -34,7 +34,18 @@ public class Rect {
     }
 
 
+    @Override
+    public int perimeter() {
+        return  (sideA + sideB) * 2;
+    }
 
+    @Override
+    public int square() {
+        return sideA * sideB;
+    }
 
-
+    @Override
+    public String name() {
+        return name;
+    }
 }
