@@ -1,5 +1,21 @@
 package org.example;
+import com.google.j2objc.annotations.Property;
+import org.junit.After;
+import org.junit.Before;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.io.IOException;
+import java.io.File;
+import java.io.File;
+import java.nio.file.Files;
+
+import static java.time.Duration.ofSeconds;
 
 
 public class YandexTest {
@@ -14,6 +30,27 @@ public class YandexTest {
      * Перейти в раздел «Оттяжки»
      * У товарной карточки «УДОЧКА ДЛЯ ВСТЕГИВАНИЯ ОТТЯЖЕК KAILAS CLIP UP III» - проверить прайс.
      */
+
+
+    public static WebDriver driver;
+    Actions builder = new Actions(driver);
+    public static WebDriverWait wait;
+
+    @Before
+    public static void setUp() {
+System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+        WebDriver driver = new ChromeDriver();
+        driver.navigate().to("http://intershop5.skillbox.ru/");
+    }
+    @After
+    public static void tearDown() throws IOException {
+        var sourceFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//        Files.copy(sourceFile, "screenshots/scrnsht.png");
+
+//        FileUtils.
+//        FileUtils.copyFile(sourceFile, new File("screenshots/scrnsht.png"));
+        driver.quit();
+    }
 
 
 
