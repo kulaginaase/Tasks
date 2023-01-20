@@ -18,7 +18,6 @@ public class MyBox {
         this.width = width;
     }
 
-
     public double getWeight() {
         return weight;
     }
