@@ -17,15 +17,17 @@ public class Main {
         MyBox emptyBox = new MyBox(1.55, 200, 799, 600);
         MyBox hardBox = new MyBox(300.01, 500, 600, 300);
         MyBox inListBox = new MyBox(299.99, 100, 200, 0);
+        MyBox newBoxy = new MyBox(500, 700, 500, 600);
 
         lightBoxes.add(emptyBox);
         lightBoxes.add(hardBox);
         lightBoxes.add(inListBox);
+        lightBoxes.add(newBoxy);
 
-        for (MyBox box : lightBoxes) {
-            if (box.weight > 300) {
-                lightBoxes.remove(box);
-                hardBoxes.add(box);
+        for (int i = 0; i < lightBoxes.size(); i++) {
+            if (lightBoxes.get(i).getWeight() > 300) {
+                hardBoxes.add(lightBoxes.get(i));
+                lightBoxes.remove(lightBoxes.get(i));
             }
         }
 
@@ -33,7 +35,9 @@ public class Main {
         System.out.println(hardBoxes.size() + " - количество тяжелых коробок");
 
 
-        /** Задача с созданием класс Pet */
+        /** _____________________________________________________________
+         * Задача с созданием класс Pet
+         * _______________________________________________________________*/
 
         HashMap<String, Pet> passportsAndNames = new HashMap<>();
 
