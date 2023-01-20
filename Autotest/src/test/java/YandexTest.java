@@ -1,8 +1,4 @@
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.openqa.selenium.By;
+import org.junit.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -20,32 +16,45 @@ public class YandexTest {
      * У товарной карточки «УДОЧКА ДЛЯ ВСТЕГИВАНИЯ ОТТЯЖЕК KAILAS CLIP UP III» - проверить прайс.
      */
 
-
-    public static WebDriver driver = new ChromeDriver();
+    public static LoginPage loginPage;
+    public static WebDriver driver;
     @BeforeClass
   public static void setUp() {
 
-System.setProperty("webdriver.chrome.driver", "/driver/chromedriver.exe");
 
+        System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriver"));
+        driver = new ChromeDriver();
 driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//        driver.get("https://passport.yandex.ru/auth"); - равносильно
         driver.get(ConfProperties.getProperty("loginpage"));
+        loginPage = new LoginPage(driver);
+
     }
 
-    @AfterClass
-    public static void tearDown() {
-        driver.quit();
-    }
+//    @AfterClass
+//    public static void tearDown() {
+//        driver.quit();
+//    }
 
     @Test
     public void loginTest() {
-        var wrongLogin = "wrongLogin";
-        var enterButton = By.className("Button2.Button2_size_l.Button2_view_action.Button2_width_max.Button2_type_submit");
-        var login = By.className("Textinput-Control");
-        driver.findElement(login).sendKeys(wrongLogin);
+        loginPage.inputLogin(ConfProperties.getProperty("login"));
+        loginPage.clickLoginBtn();
+        loginPage.inputPasswd(ConfProperties.getProperty("password"));
+        loginPage.clickLoginBtn();
+        var excepted = "Неверный пароль";
+        var actual = loginPage.getWarning();
+        Assert.assertEquals("Верификация не соответсвует ожидаемой", excepted, actual);
+//        Assert.assertEquals("Верификация не соответсвует ожидаемой", "еверный пароль", loginPage.getWarning());
+
 
     }
+//        var wrongLogin = "wrongLogin";
+//        var enterButton = By.className("Button2.Button2_size_l.Button2_view_action.Button2_width_max.Button2_type_submit");
+//        var login = By.className("Textinput-Control");
+//        driver.findElement(login).sendKeys(wrongLogin);
+// check warning - "field:input-passwd:hint" - Неверный пароль
+//    }
 
 
 }
