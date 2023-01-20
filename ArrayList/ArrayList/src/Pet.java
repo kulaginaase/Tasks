@@ -1,5 +1,6 @@
 public class Pet {
     /**
+     * https://javarush.com/groups/posts/1940-klass-hashmap-
      * Создать HashMap
      * 1.	Создайте класс Pet и его наследников Cat, Dog, Parrot.
      * 2.	Создайте отображение из домашних животных, где в качестве ключа выступает имя животного,
