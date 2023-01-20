@@ -33,7 +33,6 @@ public class Rect implements Figure {
         this.name = name;
     }
 
-
     @Override
     public int perimeter() {
         return  (sideA + sideB) * 2;

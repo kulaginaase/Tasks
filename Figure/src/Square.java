@@ -1,4 +1,4 @@
-public class Square {
+public class Square implements Figure {
     int side;
     String name;
 
@@ -21,5 +21,20 @@ public class Square {
     public Square(int side, String name) {
         this.side = side;
         this.name = name;
+    }
+
+    @Override
+    public int perimeter() {
+        return side * 4;
+    }
+
+    @Override
+    public int square() {
+        return (int) Math.pow(side, 2);
+    }
+
+    @Override
+    public String name() {
+        return name;
     }
 }

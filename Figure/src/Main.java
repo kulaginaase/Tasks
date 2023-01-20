@@ -13,16 +13,14 @@ public class Main {
          создать все три класса и вывести на печать результаты выполнения методов.*/
 
         Rect rect = new Rect(3, 4, "Rectangle");
-        rect.perimeter();
-        rect.square();
-        rect.name();
-
         RegularHexagon regularHexagon = new RegularHexagon(5, "RegularHexagon");
-        regularHexagon.perimeter();
-        regularHexagon.square();
-        regularHexagon.name();
+        Square square = new Square(16, "Square");
 
-
-//        System.out.println(regularHexagon.square() + " regularHexagon.square()");
+        System.out.println(rect.perimeter() + " - периметр прямоугольника " + rect.name() + "\n" +
+                rect.square() + " - площадь прямоугольника " + rect.name());
+        System.out.println(regularHexagon.perimeter() + " - периметр шестиугольника " + regularHexagon.name() + "\n" +
+                regularHexagon.square() + " - площадь шестиугольника " + regularHexagon.name());
+        System.out.println(square.perimeter() + " - периметр квадрата " + square.name() + "\n" +
+                square.square() + " - площадь квадрата " + square.name());
     }
 }
