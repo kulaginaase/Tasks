@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class Product {
     /**
      * Создать HashMap
@@ -7,4 +9,20 @@ public class Product {
      * 4.	Перебрать и распечатать значения продуктов - values().
      * 5.	Для каждого перебора создать свой метод.
      */
+
+    String name;
+
+    static HashMap<String, Product> products = new HashMap<>();
+
+    public static void getKeysAndValues() {
+        for (HashMap.Entry<String, Product> entry: products.entrySet()) {
+            System.out.println("⚽️ " + entry.getKey() + " = " + entry.getValue());
+        }
+    }
+
+    public static void getKeys() {
+        for (String key: products.keySet()) {
+            System.out.println("🏀️ " + key);
+        }
+    }
 }

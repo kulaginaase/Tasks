@@ -39,8 +39,18 @@ public class Main {
          * Задача с созданием класс Pet
          * _______________________________________________________________*/
 
-        HashMap<String, Pet> passportsAndNames = new HashMap<>();
 
+        System.out.println("\nЗадача с созданием класс Product");
 
+        Product doll = new Product();
+        Product car = new Product();
+        Product boll = new Product();
+
+        Product.products.put("doll", doll);
+        Product.products.put("car", car);
+        Product.products.put("boll", boll);
+
+        Product.getKeysAndValues();
+        Product.getKeys();
     }
 }
