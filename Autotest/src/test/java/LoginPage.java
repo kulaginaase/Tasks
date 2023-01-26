@@ -13,7 +13,7 @@ public class LoginPage {
     /**
      * определение локатора поля ввода логина
      */
-    @FindBy(className = "Textinput-Control")
+    @FindBy(css = "input.Textinput-Control")
     private WebElement loginField;
     /**
      * определение локатора кнопки входа в аккаунт

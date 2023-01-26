@@ -1,6 +1,4 @@
-import javax.swing.Box;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
@@ -35,12 +33,11 @@ public class Main {
         System.out.println(hardBoxes.size() + " - количество тяжелых коробок");
 
 
-        /** _____________________________________________________________
-         * Задача с созданием класс Pet
-         * _______________________________________________________________*/
+/** _____________________________________________________________
+ * Задача с созданием класс Product
+ * _______________________________________________________________*/
 
-
-        System.out.println("\nЗадача с созданием класс Product");
+        System.out.println("\nЗадача с созданием класс Product\n");
 
         Product doll = new Product();
         Product car = new Product();
@@ -52,5 +49,19 @@ public class Main {
 
         Product.getKeysAndValues();
         Product.getKeys();
+        Product.getValues();
+
+/** _____________________________________________________________
+ * Задача с созданием класс Pet
+ * _______________________________________________________________*/
+
+        System.out.println("\nЗадача с созданием класс Pet\n");
+
+        Pet.petHashMap.put("Cat", new Cat("Fox"));
+        Pet.petHashMap.put("Dog", new Dog("Deer"));
+        Pet.petHashMap.put("Parrot", new Parrot("Snake"));
+
+        Pet.getStringKeys();
+        Pet.getKeys();
     }
 }

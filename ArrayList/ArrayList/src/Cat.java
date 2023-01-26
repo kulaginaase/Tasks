@@ -1,5 +1,6 @@
 public class Cat extends Pet {
-    String Name;
-
-
+    String name;
+    public Cat(String name) {
+        this.name = name;
+    }
 }
