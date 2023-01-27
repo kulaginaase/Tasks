@@ -1,3 +1,5 @@
+package yandex;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,7 +20,7 @@ public class LoginPage {
     /**
      * определение локатора кнопки входа в аккаунт
      */
-    @FindBy(className = "Button2.Button2_size_l.Button2_view_action.Button2_width_max.Button2_type_submit")
+    @FindBy(css = "button.Button2.Button2_size_l.Button2_view_action.Button2_width_max.Button2_type_submit")
     private WebElement loginBtn;
     /**
      * определение локатора поля ввода пароля
@@ -38,12 +40,14 @@ public class LoginPage {
     /**
      * метод для ввода пароля
      */
+    public void clickLoginBtn() {
+        loginBtn.click(); }
     public void inputPasswd(String passwd) {
         passwdField.sendKeys(passwd); }
     /**
      * метод для осуществления нажатия кнопки входа в аккаунт
      */
-    public void clickLoginBtn() {
+    public void clickPassBtn() {
         loginBtn.click(); }
 
 public String getWarning() {

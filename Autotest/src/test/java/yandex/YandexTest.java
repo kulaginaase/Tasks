@@ -1,6 +1,10 @@
+package yandex;
+
 import org.junit.*;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import java.util.concurrent.TimeUnit;
 
@@ -18,43 +22,35 @@ public class YandexTest {
 
     public static LoginPage loginPage;
     public static WebDriver driver;
-    @BeforeClass
-  public static void setUp() {
+    Actions builder = new Actions(driver);
 
+
+    @BeforeClass
+    public static void setUp() {
 
         System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriver"));
         driver = new ChromeDriver();
-driver.manage().window().maximize();
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(ConfProperties.getProperty("loginpage"));
         loginPage = new LoginPage(driver);
-
     }
 
-//    @AfterClass
-//    public static void tearDown() {
-//        driver.quit();
-//    }
+    @AfterClass
+    public static void tearDown() {
+        driver.quit();
+    }
 
     @Test
-    public void loginTest() {
+    public void loginTest() throws InterruptedException {
         loginPage.inputLogin(ConfProperties.getProperty("login"));
+        builder.moveToElement(driver.findElement(By.cssSelector("button.Button2.Button2_size_l.Button2_view_action.Button2_width_max.Button2_type_submit")));
         loginPage.clickLoginBtn();
+        builder.moveToElement(driver.findElement(By.cssSelector("input.Textinput-Control")));
         loginPage.inputPasswd(ConfProperties.getProperty("password"));
-        loginPage.clickLoginBtn();
+        loginPage.clickPassBtn();
         var excepted = "Неверный пароль";
         var actual = loginPage.getWarning();
         Assert.assertEquals("Верификация не соответсвует ожидаемой", excepted, actual);
-//        Assert.assertEquals("Верификация не соответсвует ожидаемой", "еверный пароль", loginPage.getWarning());
-
-
     }
-//        var wrongLogin = "wrongLogin";
-//        var enterButton = By.className("Button2.Button2_size_l.Button2_view_action.Button2_width_max.Button2_type_submit");
-//        var login = By.className("Textinput-Control");
-//        driver.findElement(login).sendKeys(wrongLogin);
-// check warning - "field:input-passwd:hint" - Неверный пароль
-//    }
-
-
 }
