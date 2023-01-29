@@ -10,15 +10,17 @@ public class Pet {
      * 3.	Добавьте в отображение разных животных. Создайте метод выводящий на консоль все ключи отображения.
      */
 
-    static HashMap<String, Pet> petHashMap = new HashMap<>();
+    static HashMap<String, Pet> pets = new HashMap<>();
 
-    public static void getKeys() {
-        for (String key : petHashMap.keySet()) {
-            System.out.println("Ключ отображения: " + key);
+    public static void getKeysAndValues() {
+        for (HashMap.Entry<String, Pet> entry : pets.entrySet()) {
+            System.out.println("Пары значений - ключ: " + entry.getKey() + ", значение: " + entry.getValue());
         }
     }
 
-    public static void getStringKeys() {
-        System.out.println(petHashMap.keySet().toString().replaceAll("[\\[\\] ]", ""));
+    public static void getKeys() {
+        for (String key : pets.keySet()) {
+            System.out.println("Ключ отображения: " + key);
+        }
     }
 }

@@ -57,11 +57,11 @@ public class Main {
 
         System.out.println("\nЗадача с созданием класс Pet\n");
 
-        Pet.petHashMap.put("Cat", new Cat("Fox"));
-        Pet.petHashMap.put("Dog", new Dog("Deer"));
-        Pet.petHashMap.put("Parrot", new Parrot("Snake"));
+        Pet.pets.put("Cat", new Cat("Fox"));
+        Pet.pets.put("Dog", new Dog("Deer"));
+        Pet.pets.put("Parrot", new Parrot("Snake"));
 
-        Pet.getStringKeys();
+        Pet.getKeysAndValues();
         Pet.getKeys();
     }
 }
